@@ -1,0 +1,21 @@
+{% extends 'basic.html' %}
+{% load bootstrap %}
+
+{% block name %} Edit project {% endblock %}
+
+{% block site %}
+
+<div class="card position-absolute top-50 start-50 translate-middle" style="width: 40rem;">
+    <div class="card-body">
+        <h5 class="card-title"></h5>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|bootstrap }}
+            <p></p>
+            <button type="submit" class="btn btn-light" style="margin: 4px"> Accept </button>
+            <a href="{% url 'all_objects' %}" class="btn btn-light" style="margin: 4px"> Back </a>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

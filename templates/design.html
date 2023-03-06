@@ -1,0 +1,69 @@
+<!--http://127.0.0.1:8000/admin/buildings_app/project/-->
+
+{% extends 'basic.html' %}
+
+{% block name %} List of the buildings {% endblock %}
+
+{% block site %}
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col-8">
+            <h1>KOWALEWSCY DESIGN</h1>
+        </div>
+        <div class="col">
+            {% if user.is_authenticated %}
+            <p> User: {{user.username}} </p>
+            <a href="{% url 'new_building' %}" class="btn btn-light" style="margin: 4px"> Add new </a>
+            <a href="{% url 'logout' %}" class="btn btn-light" style="margin: 4px"> Logout </a>
+            {% else %}
+            <a href="{% url 'login' %}"class="btn btn-light" style="margin: 4px"> Log in <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<center>
+    {% for object in objects %}
+    <div class="card mb-3" style="max-width: 900px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="/media/{{object.view}}" alt="view" class="img-fluid rounded-star">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{object.symbol}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{object.type}}</h6>
+                    <p>{{object.parameters}}</p>
+                    <p>{{object.description}}</p>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'edit_building' object.id %}" class="card-link"><i
+                            class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="{% url 'delete_building' object.id %}" class="card-link"><i
+                            class="fa-regular fa-trash-can"></i></a>
+                    {% else %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</center>
+
+<hr>
+
+<div class="container text-center">
+    <div class=" row align-items-start">
+        <div class="col">
+            <p class="text-center text-muted"></p>
+            <p class="text-center text-muted"> +48 111 111 111 </p>
+            <p class="text-center text-muted">Lublin, Redynburska 88</p>
+            <p class="text-center text-muted">© 2023 Kowalewscy Design</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
