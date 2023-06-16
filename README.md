@@ -1,7 +1,7 @@
 # WEB APPLICATION
 ## GENERAL INFO
 Design studio website that presents company’s portfolio and allows logged-in users to add, edit or delete projects.
-projektdjango1.pythonanywhere.com/design/all/
+https://projektdjango1.pythonanywhere.com/design/all/
 ## TECHNOLOGIES & SYSTEMS
 * Python
 * Django
