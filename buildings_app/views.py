@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 def all_objects(request):
     all_buildings = Project.objects.all()
-    return render(request, 'design.html', {"objects" : all_buildings})
+    return render(request, 'design.html', {"objects": all_buildings})
 
 @login_required
 def new_building(request):
@@ -17,7 +17,7 @@ def new_building(request):
         return redirect(all_objects)
 
     return render(request, 'building_form.html',
-                  {'form': form_building, 'nowy':True})
+                  {'form': form_building, 'nowy': True})
 
 @login_required
 def edit_building(request, id):
