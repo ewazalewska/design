@@ -13,17 +13,23 @@ https://projektdjango1.pythonanywhere.com/design/all/
 * GitBash
 
 ## DETAILS
-The project list page displays a collection of projects with their titles, descriptions, and images. The application allows users to log in and manage projects by adding, editing, and deleting them.
+The project list page displays a collection of projects with their symbols, descriptions and images. The application allows users to log in and manage projects by adding, editing and deleting them.
+
 ![main page](./screenshots/web_1.jpg)
+
 ![edit](./screenshots/web_2.jpg)
+
 ![edit](./screenshots/web_3.jpg)
 
-It also provides an admin interface, where administrators can perform additional tasks such as adding, editing, and filtering the list of projects based on parameters.
+It also provides an admin interface, where administrators can perform additional tasks such as adding, editing and filtering the list of projects based on parameters.
+
 ![django administration](./screenshots/admin_1.jpg)
+
 ![django administration](./screenshots/admin_2.jpg)
 
+
 ## TODO
-- Users can click on individual projects to view more details.
+- Implement the functionality for users to click on individual projects and view more details.
 
 ## INSTALLATION
 1.	Clone the repository:
@@ -46,4 +52,3 @@ python manage.py runserver
 * https://unsplash.com/
 ### ICONS
 * https://fontawesome.com/
-
