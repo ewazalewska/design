@@ -52,7 +52,7 @@ python manage.py runserver
 * inspired by https://www.udemy.com/course/django-po-polsku-podstawy/learn/lecture/10817412#overview
 ### DEPLOYMENT
 * https://help.pythonanywhere.com/pages/DeployExistingDjangoProject/
-### FOTOGRAPHS
+### FHOTOGRAPHS
 * https://www.pexels.com/pl-pl/
 * https://unsplash.com/
 ### ICONS
